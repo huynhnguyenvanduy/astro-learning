@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Config">
+  <section class="page">
+    <div class="page-header">
+      <div>
+        <h1>System Config</h1>
+        <p>Cấu hình chung cho hệ thống</p>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Cấu hình</th>
+            <th>Giá trị</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tên cửa hàng</strong></td>
+            <td>Shoes Store Admin</td>
+            <td>
+              <button class="action-btn">
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td><strong>Email quản trị</strong></td>
+            <td>admin@shoes.com</td>
+            <td>
+              <button class="action-btn">
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td><strong>Đơn vị tiền tệ</strong></td>
+            <td>VND</td>
+            <td>
+              <button class="action-btn">
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</Layout>

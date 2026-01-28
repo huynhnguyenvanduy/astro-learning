@@ -1,25 +1,135 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Links from '../components/Links.astro';
-import NewsBox from '../components/NewsBox.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<div id="container">
-		<Hero>
-			<Links />
-		</Hero>
+<Layout title="Trang chủ">
+  <section class="hero">
+    <div class="welcome-card">
+      <span class="badge">Shoe Management System</span>
 
-		<NewsBox />
-	</div>
+      <h1>
+        Hệ thống<br />
+        <span>Quản lý giày</span>
+      </h1>
+
+      <p>
+        Giải pháp giúp bạn quản lý <strong>kho hàng</strong>,
+        <strong>sản phẩm</strong> và <strong>đơn hàng</strong>
+        một cách nhanh chóng và hiệu quả.
+      </p>
+
+      <div class="actions">
+        <a href="/products" class="btn primary">Quản lý sản phẩm</a>
+        <a href="/reports" class="btn ghost">Xem báo cáo</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Layout nền */
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f8fafc, #eef2ff);
+      padding: 40px 20px;
+    }
+
+    /* Card chính */
+    .welcome-card {
+      background: #ffffff;
+      padding: 48px;
+      max-width: 640px;
+      border-radius: 20px;
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.08),
+        0 8px 16px rgba(0, 0, 0, 0.04);
+      text-align: center;
+      animation: fadeUp 0.6s ease;
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #4f46e5;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 20px;
+    }
+
+    /* Title */
+    .welcome-card h1 {
+      margin: 0 0 16px;
+      font-size: 36px;
+      line-height: 1.2;
+      color: #0f172a;
+    }
+
+    .welcome-card h1 span {
+      color: #4f46e5;
+    }
+
+    /* Description */
+    .welcome-card p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #475569;
+      margin-bottom: 32px;
+    }
+
+    /* Actions */
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn.primary {
+      background: #4f46e5;
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+    }
+
+    .btn.primary:hover {
+      background: #4338ca;
+      transform: translateY(-2px);
+    }
+
+    .btn.ghost {
+      border: 1px solid #c7d2fe;
+      color: #4f46e5;
+      background: transparent;
+    }
+
+    .btn.ghost:hover {
+      background: #eef2ff;
+    }
+
+    /* Animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </Layout>
-
-<style>
-#container {
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	position: relative;
-}
-</style>
