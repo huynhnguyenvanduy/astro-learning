@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Products">
+  <section class="page">
+    <!-- Header -->
+    <div class="page-header">
+      <div>
+        <h1>Products</h1>
+        <p>Danh sách sản phẩm trong hệ thống</p>
+      </div>
+      <button class="btn primary">
+        <i class="fa-solid fa-plus"></i>
+        Thêm sản phẩm
+      </button>
+    </div>
+
+    <!-- Table -->
+    <div class="table-wrapper">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Sản phẩm</th>
+            <th>Danh mục</th>
+            <th>Giá</th>
+            <th>Tồn kho</th>
+            <th>Trạng thái</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="product">
+              <img src="https://via.placeholder.com/44" />
+              <div>
+                <strong>Nike Air Force 1</strong>
+                <div class="muted">SKU: NK-AF1</div>
+              </div>
+            </td>
+            <td>Giày thể thao</td>
+            <td><strong>2,500,000₫</strong></td>
+            <td>120</td>
+            <td><span class="badge success">Đang bán</span></td>
+            <td>
+              <div class="actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="action-btn danger">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="product">
+              <img src="https://via.placeholder.com/44" />
+              <div>
+                <strong>Adidas UltraBoost</strong>
+                <div class="muted">SKU: AD-UB</div>
+              </div>
+            </td>
+            <td>Giày thể thao</td>
+            <td><strong>3,200,000₫</strong></td>
+            <td>0</td>
+            <td><span class="badge danger">Hết hàng</span></td>
+            <td>
+              <div class="actions">
+                <button class="action-btn">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+                <button class="action-btn">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+                <button class="action-btn danger">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</Layout>
