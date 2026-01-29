@@ -1,0 +1,11 @@
+---
+const { product } = Astro.props;
+---
+
+<a href={`/user/product/${product.slug}`} class="product-card">
+  <img src={product.image} alt={product.name} />
+  <div class="info">
+    <h3>{product.name}</h3>
+    <p class="price">{product.price.toLocaleString()} đ</p>
+  </div>
+</a>

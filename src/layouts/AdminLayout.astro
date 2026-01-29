@@ -10,8 +10,8 @@ import "../styles/table.css";
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
 
     <style>
       :root {
@@ -155,27 +155,27 @@ import "../styles/table.css";
       <!-- Sidebar -->
       <aside class="sidebar">
         <h3>Main</h3>
-        <a href="/" class="active">
+        <a href="/admin/" class="active">
           <i class="fa-solid fa-house"></i>
           Trang chủ
         </a>
-        <a href="/dashboard">
+        <a href="/admin/dashboard">
           <i class="fa-solid fa-gauge"></i>
           Dashboard
         </a>
 
         <h3>Management</h3>
-        <a href="categories">
+        <a href="/admin/categories">
           <i class="fa-solid fa-layer-group"></i>
           Categories
         </a>
-        <a href="products">
+        <a href="/admin/products">
           <i class="fa-solid fa-box"></i>
           Products
         </a>
 
         <h3>System</h3>
-        <a href=" config">
+        <a href=" /admin/config">
           <i class="fa-solid fa-gear"></i>
           Config
         </a>

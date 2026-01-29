@@ -1,0 +1,212 @@
+body {
+}
+
+.nav a {
+  margin-left: 16px;
+  color: #fff;
+}
+
+.hero {
+  height: 70vh;
+  background: linear-gradient(135deg, #000, #333);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary {
+  margin-top: 20px;
+  background: #fff;
+  color: #000;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.price {
+  color: #e63946;
+  font-weight: 600;
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.user-footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #aaa;
+}
+
+/* ==== GLOBAL FIX ==== */
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #f5f5f5;
+  color: #111;
+}
+
+.main {
+  padding: 40px 0;
+  min-height: 60vh;
+}
+
+/* ==== CONTAINER ==== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==== PRODUCT DETAIL ==== */
+.detail {
+  background: #fff;
+  padding: 32px;
+  border-radius: 20px;
+}
+
+.detail img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.detail-info h1 {
+  margin-top: 0;
+}
+
+/* ===== HEADER ===== */
+.user-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: 0.3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Search */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f5f5f5;
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 140px;
+}
+
+/* Cart */
+.cart {
+  position: relative;
+  color: #111;
+  font-size: 18px;
+}
+
+.cart .badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #e63946;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+/* User avatar */
+.user-avatar img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
