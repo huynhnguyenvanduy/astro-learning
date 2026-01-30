@@ -3,8 +3,146 @@ import UserLayout from "../../layouts/UserLayout.astro";
 ---
 
 <UserLayout title="Shoe Store">
+  <!-- HERO -->
   <section class="hero">
-    <h1>Giày chính hãng – Phong cách hiện đại</h1>
-    <a href="/user/shop" class="btn-primary">Mua ngay</a>
+    <div class="hero-left">
+      <span class="tag">New Collection 2026</span>
+      <h1>
+        Giày chính hãng <br />
+        <span>Chuẩn phong cách – Chuẩn chất lượng</span>
+      </h1>
+      <p>
+        ShoeStore mang đến những mẫu giày thời thượng, chính hãng, phù hợp cho
+        mọi phong cách sống hiện đại.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn-primary" href="/user/shop">Mua ngay</a>
+        <a class="btn-outline" href="/user/collections">Xem bộ sưu tập</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img src="/images/shoes-1.png" alt="Hero Shoe" />
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section class="trust">
+    <div class="trust-item">
+      <i class="fa fa-users"></i>
+      <strong>10K+</strong>
+      <span>Khách hàng</span>
+    </div>
+
+    <div class="trust-item">
+      <i class="fa fa-certificate"></i>
+      <strong>100%</strong>
+      <span>Hàng chính hãng</span>
+    </div>
+
+    <div class="trust-item">
+      <i class="fa fa-truck-fast"></i>
+      <strong>48h</strong>
+      <span>Giao nhanh</span>
+    </div>
+
+    <div class="trust-item">
+      <i class="fa fa-headset"></i>
+      <strong>24/7</strong>
+      <span>Hỗ trợ</span>
+    </div>
+  </section>
+
+  <!-- BEST SELLERS -->
+  <section class="section">
+    <div class="section-header">
+      <h2>Best Sellers</h2>
+      <a href="/user/shop">Xem tất cả →</a>
+    </div>
+
+    <div class="product-grid">
+      {
+        Array(6)
+          .fill(0)
+          .map((_, i) => (
+            <div class="product-card">
+              <span class="badge-sale">Hot</span>
+              <img src="/images/shoes-1.png" />
+              <h3>Air Zoom {i + 1}</h3>
+              <p class="price">2.890.000₫</p>
+              <a class="btn-add">Thêm vào giỏ</a>
+            </div>
+          ))
+      }
+    </div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <section class="promo">
+    <div>
+      <h3>Summer Sale</h3>
+      <p>Giảm đến <strong>30%</strong> cho bộ sưu tập mùa hè</p>
+      <a class="btn-light">Khám phá ngay</a>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section">
+    <h2>Danh mục sản phẩm</h2>
+
+    <div class="category-grid">
+      <div class="category-card">Running</div>
+      <div class="category-card">Lifestyle</div>
+      <div class="category-card">Basketball</div>
+      <div class="category-card">Luxury</div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why">
+    <div class="why-item">
+      <i class="fa fa-check-circle"></i>
+      <h4>Chính hãng 100%</h4>
+      <p>Cam kết hoàn tiền nếu phát hiện hàng giả</p>
+    </div>
+
+    <div class="why-item">
+      <i class="fa fa-rotate-left"></i>
+      <h4>Đổi trả 7 ngày</h4>
+      <p>Dễ dàng – nhanh chóng – minh bạch</p>
+    </div>
+
+    <div class="why-item">
+      <i class="fa fa-star"></i>
+      <h4>Đánh giá 5★</h4>
+      <p>Hơn 95% khách hàng hài lòng</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section">
+    <h2>Khách hàng nói gì?</h2>
+
+    <div class="review-grid">
+      <div class="review">
+        <p>“Giày đẹp, mang êm, giao hàng rất nhanh.”</p>
+        <strong>— Nguyễn Văn A</strong>
+      </div>
+      <div class="review">
+        <p>“Shop tư vấn nhiệt tình, rất đáng tin.”</p>
+        <strong>— Trần Thị B</strong>
+      </div>
+      <div class="review">
+        <p>“Sẽ tiếp tục ủng hộ lâu dài.”</p>
+        <strong>— Lê Văn C</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta">
+    <h2>Bắt đầu phong cách của bạn ngay hôm nay</h2>
+    <a class="btn-primary">Mua sắm ngay</a>
   </section>
 </UserLayout>
