@@ -1,0 +1,27 @@
+---
+const { product } = Astro.props;
+const buttonId = `add-to-cart-${product.slug}`;
+---
+
+<button
+  id={buttonId}
+  class="btn-primary"
+  data-product={JSON.stringify(product)}
+>
+  <i class="fa fa-cart-shopping"></i>
+  Thêm vào giỏ
+</button>
+
+<script type="module">
+  import { addToCart } from "../utils/car";
+
+  const button = document.getElementById("{buttonId}");
+
+  if (button) {
+    button.addEventListener("click", () => {
+      const product = JSON.parse(button.dataset.product);
+      addToCart(product);
+      alert("🛒 Đã thêm vào giỏ hàng!");
+    });
+  }
+</script>
