@@ -1,4 +1,5 @@
 ---
+import AddToCartButton from "../../../components/user/AddToCartButton.astro";
 import UserLayout from "../../../layouts/UserLayout.astro";
 
 export const prerender = false;
@@ -6,6 +7,7 @@ export const prerender = false;
 const slug = Astro.params.slug || "san-pham";
 
 const product = {
+  slug,
   name: slug.replace(/-/g, " "),
   price: 2800000,
   image: "/images/shoes/nike-af1.jpg",
@@ -22,10 +24,7 @@ const product = {
       <p class="price">{product.price.toLocaleString()} đ</p>
       <p>{product.description}</p>
 
-      <button class="btn-primary">
-        <i class="fa fa-cart-shopping"></i>
-        Thêm vào giỏ
-      </button>
+      <AddToCartButton product={product} />
     </div>
   </section>
 </UserLayout>
